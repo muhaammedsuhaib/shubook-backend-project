@@ -17,10 +17,9 @@ const PORT = process.env.PORT;
 const DB = process.env.DB;
 
 // Connect mongoose
-mongoose
-  .connect(DB)
-  .then(() => console.log("DB connected"))
-  .catch((error) => console.error(error));
+mongoose.connect(DB)
+.then(()=>console.log("DB Connected"))
+.catch((err)=>console.log(err));
 
 app.use("/api", todoRoutes);
 
