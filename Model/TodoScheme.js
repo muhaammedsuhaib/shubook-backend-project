@@ -1,15 +1,20 @@
+import mongoose from 'mongoose';
 
-import mongoose from "mongoose";
-
-const todoScheme=mongoose.Schema({
-    Todoheading:{
-        type:String,
-        required:true
+const todoScheme = mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     },
-    Todotext:{
-        type:String,
-        required:true
+    Todoheading: {
+        type: String,
+        required: true
+    },
+    Todotext: {
+        type: String,
+        required: true
     }
-})
-const Todo = mongoose.model('Todo',todoScheme)
-export default Todo
+});
+
+const Todo = mongoose.model('Todo', todoScheme);
+export default Todo;

@@ -1,7 +1,9 @@
 import express from "express";
-import { login, signup } from "../Controller/authController.js";
+import { changePassword, login, signup } from "../Controller/authController.js";
 
 const route=express.Router();
+
+route.put('/:userId/change',changePassword);
 
 route.post("/register",signup);
 route.post("/login",login);
