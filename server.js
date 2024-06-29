@@ -9,8 +9,8 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin:"https://shubook-front-end-project.vercel.app/",
-  credentials:true
+  // origin:"https://shubook-front-end-project.vercel.app/",
+  // credentials:true
 }))
 
 //process .env
