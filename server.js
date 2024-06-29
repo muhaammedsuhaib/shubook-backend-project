@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin:"http://localhost:3000",
+  origin:"https://shubook-front-end-project.vercel.app/",
   credentials:true
 }))
 
